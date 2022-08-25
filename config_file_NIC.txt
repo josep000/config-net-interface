@@ -1,0 +1,17 @@
+#Comments
+#This file is a simple text with config parameters for appling settings on networks interface.
+#gateway_IP, DNS_1, and DNS_2 are optional. When trying setting dhcp for Intarface_IP and DNS_1 or DNS_2 are filled DNS gets as static.
+#The next line shows the format splitted with ;
+#Interface_name; type_config:static or dhcp; interface_IP; mask;gateway_IP; dhcp/static; DNS_1; DNS_2; Description_Optional
+#Ethernet;static;192.168.10.250;255.255.255.0;192.168.10.2;static;192.168.10.2;8.8.8.8;Config x
+Ethernet;static;192.168.1.250;255.255.255.0;192.168.1.1;static;8.8.8.8;8.8.4.4;Config 1
+Ethernet;static;10.0.40.254;255.255.255.0;;static;8.8.8.8;;Config 2
+Ethernet;static;10.5.1.100;255.0.0.0;10.5.1.1;static;;;Config 3
+Ethernet;dhcp;;;;static;8.8.8.8;8.8.4.4;Config 4 ip dhcp, dns static
+Ethernet;dhcp;;;;dhcp;;;Config 5 dhcp
+Ethernet;static;;;;static;;;
+Ethernet;static;192.168.10.220;255.255.255.0;192.168.10.2;static;8.8.8.8;8.8.4.4;Config 1
+Ethernet;static;10.0.40.254;255.255.255.0;;static;;;
+Ethernet;static;192.168.20.250;255.255.255.0;192.168.20.1;static;8.8.8.8;8.8.4.4;Config 1
+Ethernet;static;192.168.6.250;255.255.255.0;192.168.6.1;static;8.8.8.8;8.8.4.4;Config 1
+
