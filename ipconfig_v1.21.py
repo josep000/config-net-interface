@@ -1,4 +1,6 @@
+debuggVar = 0
 icon_img = b'AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///9/////f////4D///+A////gP///4D///9/////f////3////+A////gP///3////+A////f////3////9/////f////4D///+A////gP///4D///+A////gP///4D///+A////gP///4D///9/////gP///3////9/////QP////////////////////////////////////////////////////////////////////////////////////////////////////+goKD/d3d3//Pz8/////////////////////////////////////////////////////9////////////////////////////////////////////////////////////////////////////q6ur/n5+f/+Li4v//////8/Pz/wAAAP8AAAD/zs7O///////z8/P/oaGh/+Tk5P///////////////////////////////3///////////////////////////////////////////////////////////////////////////6urq/8AAAD/UFBQ/+Li4v+0tLT/AAAA/wAAAP+QkJD/3d3d/4+Pj/+7u7v/+vr6//rq4///////////////////////////gP//////////////////////////////////////////////////////////////////////////2NjY/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/vr6+//759v/8rHX//5MA//PPvf////////////////////9////////////////////////////////////////////////////////////y8vL/4eHh///////S0tL/AAAA/wAAAP89PT3/o6Oj/729vf++vr7/sLCw/8DAwP/89/X//Kpy//+TAP//kwD/89HB//r6+v///////////////4D///////////39/f/U1NT/0dHR/9HR0f/R0dH/0dHR/9HR0f+34Mn/tuDK/1VZWP8AAAD/bGxs/woKCv8AAAD/X15e/8bGxv/R0dH/0dHR/9PT0//6+vr//ff1//2rc///kwD//5MA//jDp//5+fn/dnZ2/+vr6///////////gP//////////+fn5/7a2tv+0s7P/tLOz/7Szs/+0s7P/s7Oz/4zQqv+M0Kr/TWhZ/wAAAP8AAAD/AAAA/5CQkP+0s7P/tLOz/7Szs/+0s7P/tLS0//Hs6f/9rHT//5MA//+TAP/5wqT/+fn5/319ff9DQ0P/8fHx//////////+A//////////////////////////////////////////////////////////+f0LP/N3RU/wAAAP9nZ2f//Pz9///////////////////////++ff//Kpz//+TAP//kwD//MKj//r6+v+EhIT/ZWVl//Pz8////////////////4D//////////////////////////////////////////////////////////5/Ss/82b1D/AAAA/8nJyf///////////////////////vn3//yrc///kwD//5MA//3Cof//////7+/v/wAAAP82Njb/////////////////////gP////////////////////////////////////////////////7+/v+np6f/Xm9l/xslH/8AAAD/5eXl//////////////////359//9rHb//5MA//+TAP/8wJ///v7+////////////V1dX/wAAAP97e3v/kpKS//Dw8P////+A////////////////////////////////////////////////5eXl/wAAAP8AAAD/AAAA/wAAAP/29vb////////////++ff//a13//+TAP//kwD/+r6c//7+/v////////////////93d3f/AAAA/wAAAP8AAAD/vr6+/////4D////////////////+/v7/9vb2//b29v/29vb/9vb2//b29v/29vb/qKio/2hoaP9OTk7/t7e3//T09P/29vb/+PPx//6ueP//kwD//5MA//i7mP/9/f3//////////////////////0lJSf8AAAD/h4eH/56env/29vb/////gP///////////////9bW1v/MzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMzM/8vLy//Wu6//7KR2//CibP/2m1L//5MA//+TAP/oonX/0NDQ///////////////////////s7Oz/AAAA/z09Pf////////////////////+A////////////////zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/h4aG/3l5ef95eXn/uYxz//+TAP//kwD//5MA//+TAP//kwD/7p9m/8nJyf/MzMz//v7+/////////////////56env8AAAD/Y2Nj/+vr6////////////////4D////////////////MzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP9MS0v/QkBA/0JAQP/siiD/948T/8B0Lv/uo3L//5MA//+TAP/PsqT/zMzM/8zMzP/+/v7////////////Pz8//AAAA/wAAAP8AAAD/Ly8v/+7u7v//////////gP///////////////8zMzP/MzMz/zMzM/8DAwP9hYGD/Xl1d/0NBQf9CQED/QkBA/+iIIf9lTUH/Pz09/19eXv/oiB3//5MA/96ym//MzMz/zMzM//7+/v/5+fn/uLi4/wEBAf8AAAD/h4eH/xgYGP8kJCT/7u7u//////////9/////////////////zMzM/8zMzP/Nzc3/urm5/0JAQP9CQED/QkBA/0JAQP9CQED/RkRE/0JAQP9FRET/Xkk+/+6LF///kwD/0Lqw/6+vr/+VlZX/np6e/0NDQ/8AAAD/AAAA/7Gxsf//////8fHx//Dw8P///////////////3/////////////////MzMz/mpmZ/0JAQP9CQED/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/QkBA/2JKPv/qiiX//5MA/9V+Kf9FQ0P/Hh0d/wAAAP8AAAD/AAAA/wAAAP8AAAD/o6Oj////////////////////////////////f////////////////8zMzP+ZmZn/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/mGE5/8F0Mf+vbDX/SkRC/0RCQv8AAAD/AAAA/56env/q6ur/np6e/wAAAP9XV1f///////////////////////////////9/////////////////zMzM/5mZmf9CQED/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/SUdH/wAAAP8AAAD/0NDQ///////4+Pj/urq6/9/f3////////////////////////////////3/////////////////MzMz/mZmZ/0JAQP9CQED/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/TExM/3V1df/29vb/////////////////////////////////////////////////////gP///////////////8zMzP+ZmZn/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/QkBA/0JAQP+EhIT/zMzM//7+/v////////////////////////////////////////////////////9/////////////////zMzM/5mZmf9CQED/QkA//0I/QP9CQED/QkBA/0JAQP9CQED/QkBA/0JAQP9CQED/QkBA/0I/QP9CQD//QkBA/4SEhP/MzMz//v7+/////////////////////////////////////////////////////4D////////////////MzMz/mZmZ/051iv9oxfL/P0VK/2rE8f9Md47/Ya/W/1SVtv9Ylrb/YbPc/012if9oxfL/QlBZ/2rG8f9Ne5X/hISE/8zMzP/+/v7/////////////////////////////////////////////////////gP///////////////8zMzP+ZmZn/TXmP/2fM/v8/Rkv/acz//0t6lf9gtuL/Upu//1ebv/9guuj/TXqQ/2fM/v9BUlz/as7+/0yAnP+EhIT/zMzM//7+/v////////////////////////////////////////////////////+A////////////////zMzM/5mZmf9NeJD/Z8z+/z9GS/9ozP7/S3qV/2C24v9Sm7//V5u//2C65/9MepD/Z8z+/0FSW/9pzf7/TICc/4SEhP/MzMz//v7+/////////////////////////////////////////////////////4D////////////////MzMz/mZmZ/0NFR/9HU1v/QkBB/0dTWv9DRUj/RU5V/0NKTv9ESk//RVBV/0NFSP9HU1r/QkFC/0dTW/9DRkn/hISE/8zMzP/+/v7/////////////////////////////////////////////////////gP///////////////8vMzP+pqKj/e3p6/3t6ev97enr/e3p6/3t6ev97enr/e3p6/3t6ev97enr/e3p6/3t6ev97enr/e3p6/3t6ev+goKD/zMzM//7+/v////////////////////////////////////////////////////+A////////////////1NTU/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP/Q0ND//////////////////////////////////////////////////////////4D////////////////8/Pz/8/Pz//Pz8//z8/P/8/Pz//Pz8//z8/P/8/Pz//Pz8//z8/P/8/Pz//Pz8//z8/P/8/Pz//Pz8//z8/P/8/Pz//z8/P//////////////////////////////////////////////////////////gP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA='
+from ast import Return
 from PIL import ImageTk		# pip install --upgrade Pillow
 from base64 import b64decode
 import netifaces as ni       # pip install netifaces
@@ -17,6 +19,8 @@ import platform
 import subprocess
 import time
 import tkinter.scrolledtext as st
+
+# from test import validateAddress
 
 #open CMD, place in file folder and tipe: pyinstaller --onefile ipconfig_v1.14.py 
 # pyinstaller --onefile --nowindowed --icon="C:\Users\epugner\Desktop\CURSOS\Practicas Python\practicas propias 2021\config interface - ping tool\img\icon.ico" ipconfig_v1.15.py
@@ -269,6 +273,8 @@ class network_configs():
             self.interface_mask.config(state='disabled')
             self.interface_gateway.config(state='disabled')
             self.dns_config.config(state='normal')
+            self.dns_config_variable.set(self.configs_dns[0])
+            self.dns_config_selected_value = self.configs_dns[0]
             if choice2 == 'dhcp':
                 self.dns_config.config(state='normal')
                 self.dns_config_variable.set(self.configs_dns[0])
@@ -318,7 +324,7 @@ class network_configs():
         # print('get' , self.interface_ip.get())
         # print('text[-1:]: ', text[-1:])
         # print('-char: ', char , ' -text:', text, ' -text.count("."): ', text.count('.'), ' -len(text: ', len(text))
-        print (text.split('.'))
+        # print (text.split('.'))
         
         # resultToReturn = char in "0123456789." and text.count('.') < 4 and char != '.' and len(text) < 15
         if char in "0123456789." and len(text) < 15:
@@ -425,14 +431,14 @@ class network_configs():
         self.interface_config.grid(row = 1, column = 2,padx=5)
 
         # 4-IP
-        Label(self.edit_wind, text = 'IP Interface *').grid(row = 0, column = 3,padx=5)
+        Label(self.edit_wind, text = 'IP Address *').grid(row = 0, column = 3,padx=5)
         self.interface_ip= Entry(self.edit_wind,width=16,validate="key",validatecommand=(self.validatecommand_ip, "%d", "%S", "%s"))
         self.interface_ip.grid(row = 1, column = 3,padx=5)
         for letter in reversed(self.device[3]):
             self.interface_ip.insert(0,letter)
 
         # 5-MASK
-        Label(self.edit_wind, text = 'Mask Interface *').grid(row = 0, column = 4,padx=5)
+        Label(self.edit_wind, text = 'Mask Address *').grid(row = 0, column = 4,padx=5)
         self.interface_mask= Entry(self.edit_wind,width=16,validate="key",validatecommand=(self.validatecommand_ip, "%d", "%S", "%s"))
         self.interface_mask.grid(row = 1, column = 4,padx=5)
         for letter in reversed(self.device[4]):
@@ -568,12 +574,72 @@ class network_configs():
         self.dns_1.config(state='disabled')
         self.dns_2.config(state='disabled')
 
+    def validateAddress(self, value):
+        print ("value ",value)
+        if value != "":
+            separador = "."
+            separadorCount = value.count(separador)
+            listValue = value.split(separador)
+            countSub = 0
+            print ("listValue", listValue)
+            print ("separadorCount", separadorCount)
+            
+            for i in listValue:
+                # if type(i) is int:
+                if i.isdigit():
+                    if int(i) <= 255 and int(i) >= 0:
+                        print (i)
+                        countSub = countSub + 1
+                else:
+                    return False
+            
+            # print (len(valorSeparado))
+            print ("countSub" , countSub)
+            
+            
+            if countSub == 4 and separadorCount == 3:
+                return True
+            else:
+                return False
+        else:
+            return False
+        
+    def validateAddressOptional(self, value):
+        print ("value ",value)
+        if value == "":
+            return True
+        else:
+            separador = "."
+            separadorCount = value.count(separador)
+            listValue = value.split(separador)
+            countSub = 0
+            print ("listValue", listValue)
+            print ("separadorCount", separadorCount)
+            
+            for i in listValue:
+                # if type(i) is int:
+                if i.isdigit():
+                    if int(i) <= 255 and int(i) >= 0:
+                        print (i)
+                        countSub = countSub + 1
+                else:
+                    return False
+            
+            # print (len(valorSeparado))
+            print ("countSub" , countSub)
+            
+            
+            if countSub == 4 and separadorCount == 3:
+                return True
+            else:
+                return False
+
     def save_registry(self,option_choice_btn):
-        print ('Puntos: ',self.interface_ip.get().count('.'))
-        c = '.'
-        s = self.interface_ip.get()
-        posiciones = [pos for pos, char in enumerate(s) if char == c]
-        print('posiciones: ', posiciones)
+        # print ('Puntos: ',self.interface_ip.get().count('.'))
+        # c = '.'
+        # s = self.interface_ip.get()
+        # posiciones = [pos for pos, char in enumerate(s) if char == c]
+        # print('posiciones: ', posiciones)
         # if len(posiciones)<4:
         #     for index in posiciones:
         #         if self.interface_ip.get()[index-1].isdigit() and self.interface_ip.get()[index+1].isdigit() and len(posiciones)<4:
@@ -582,8 +648,27 @@ class network_configs():
         #             tkinter.messagebox.showerror(title=None, message=None)
         # else:
         #     tkinter.messagebox.showerror(title=None, message=None)
-            
-            
+        
+        # print ("campo a evaluar" , self.interface_ip.get() , "tipo: " , type(self.interface_ip.get()))
+        
+        if self.interface_config_selected_value == "static":
+            if (self.validateAddress(self.interface_ip.get()) and self.validateAddress(self.interface_mask.get()) and self.validateAddressOptional(self.interface_gateway.get()) and self.interface_name_selected_value != ""):
+                pass
+            else:
+                print ("Error en condifguracion ip insertada")
+                return
+        
+        if self.interface_config_selected_value == "dhcp":
+            if self.interface_name_selected_value == "":
+                print ("Seleccione nombre de interfaz")
+                return
+
+        if self.validateAddressOptional(self.dns_1.get()) and self.validateAddressOptional(self.dns_2.get()):
+            pass
+        else:
+            print ("Error en los DNS")
+            return
+
         # print('device >', self.device)
         line_text = self.interface_name_selected_value +';'+ self.interface_config_selected_value +';'+ self.interface_ip.get() +';'+ self.interface_mask.get() +';'+ self.interface_gateway.get() +';'+ self.dns_config_selected_value +';'+ self.dns_1.get() +';'+ self.dns_2.get() +';'+ self.observation.get()
         # print('line_text >', line_text)
@@ -602,9 +687,9 @@ class network_configs():
             file.writelines(list_text_file)
             file.close()
             self.read_file()
-
-
         self.edit_wind.destroy()
+
+
 
     def clone_config(self):
         self.message['text'] = ''
@@ -677,6 +762,20 @@ class network_configs():
                 self.root.update()
                 print (command_string)
                 print (command_result)
+                self.text_result.delete("1.0","end")
+                self.message['text'] = 'Wait a few seconds'
+                self.root.update()
+                self.text_result.insert(1.0,command_result)
+                self.text_result.insert(1.0,command_string)
+                
+                self.message['text'] = ''
+                
+                
+                
+                
+                
+                
+                
         except:
             self.message['text'] = 'Unknow Error.'
 

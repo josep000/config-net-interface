@@ -7,8 +7,8 @@ valor = "255.255.1"
 def validateAddress(value):
     separador = "."
 
-    separadorCount = valor.count(separador)
-    listValue = valor.split(separador)
+    separadorCount = value.count(separador)
+    listValue = value.split(separador)
     countSub = 0
 
     for i in listValue:
