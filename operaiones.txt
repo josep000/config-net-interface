@@ -1,0 +1,22 @@
+
+validar direccion ip
+1 - validar que el campo tenga 3 puntos
+2 - validar que cada punto tenga numeros de cada lado
+3 - validad que esos numeros sean entre 0 y 255. Deberian evaluarse 4 valores.
+
+se va a contar la cantidad de puntos
+>>> s = "Hola mundo"
+>>> s.count("Hola")
+
+
+
+Se va a utilizar join y split
+
+>>> " ".join(["Hola", "mundo"])
+'Hola mundo'
+>>> ", ".join(["C", "C++", "Python", "Java"])
+'C, C++, Python, Java'
+
+>>> sep = " "
+>>> sep.join("Hola mundo!".split(sep))
+'Hola mundo!'
