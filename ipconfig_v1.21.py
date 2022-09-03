@@ -368,7 +368,7 @@ class network_configs():
         #Creating window toplevel
         self.edit_wind = Toplevel()
         ancho_ventana = 870
-        alto_ventana = 160
+        alto_ventana = 180
         self.edit_wind.maxsize(ancho_ventana, alto_ventana)
         self.edit_wind.minsize(ancho_ventana, alto_ventana)
         self.edit_wind.title = 'Edit config'
@@ -498,6 +498,11 @@ class network_configs():
         self.observation.grid(row = 3, column = 2,columnspan=5,padx=5)
         # Button(self.edit_wind, text = 'Update', command = lambda: self.edit_line(name, new_name.get(), new_price.get())).grid(row = 4, column = 2, sticky=W)
         self.observation.insert(0,self.device[9])
+        
+        # 11-MESSAGE
+        self.message2 = Label(self.edit_wind, text = '', fg = 'red', background=self.bgColor, font=(3))
+        self.message2.grid(row = 4, column = 0, columnspan=6, sticky= W + E,pady=0, padx=20)
+        
         
         #BUTTONS
         ttk.Button(self.edit_wind, text = 'Save', command= lambda: self.save_registry(option_choice_btn)).grid(row = 5,column=0, columnspan=6,sticky= W,pady=15, padx=300)
@@ -655,18 +660,21 @@ class network_configs():
             if (self.validateAddress(self.interface_ip.get()) and self.validateAddress(self.interface_mask.get()) and self.validateAddressOptional(self.interface_gateway.get()) and self.interface_name_selected_value != ""):
                 pass
             else:
-                print ("Error en condifguracion ip insertada")
+                self.message2['text'] = 'Bad IP/Mask/Gateway Address'
+                print ('Bad IP/Mask/Gateway Address')
                 return
         
         if self.interface_config_selected_value == "dhcp":
             if self.interface_name_selected_value == "":
-                print ("Seleccione nombre de interfaz")
+                print ("Select Interface Name")
+                self.message2['text'] = 'Select Interface Name'
                 return
 
         if self.validateAddressOptional(self.dns_1.get()) and self.validateAddressOptional(self.dns_2.get()):
             pass
         else:
-            print ("Error en los DNS")
+            print ("Bad DNS Name")
+            self.message2['text'] = 'Bad DNS Name'
             return
 
         # print('device >', self.device)

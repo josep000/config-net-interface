@@ -19,3 +19,6 @@ Ethernet;dhcp;;;;dhcp;;;
 Ethernet;static;192.168.1.1;255.255.255.0;;static;;;
 Ethernet;static;192.168.1.1;255.255.255.0;;static;192.168.1.1;8.8.8.8;
 Ethernet;static;192.168.1.1;255.255.255.0;;static;;;
+Ethernet;static;1.1.1.1;1.1.1.1;;static;;;
+Ethernet;static;1.1.1.1;1.1.1.1;;static;;;
+Ethernet;static;192.168.43.6;255.255.255.0;;static;;;
