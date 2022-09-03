@@ -673,8 +673,8 @@ class network_configs():
         if self.validateAddressOptional(self.dns_1.get()) and self.validateAddressOptional(self.dns_2.get()):
             pass
         else:
-            print ("Bad DNS Name")
-            self.message2['text'] = 'Bad DNS Name'
+            print ("Bad DNS Address")
+            self.message2['text'] = 'Bad DNS Address'
             return
 
         # print('device >', self.device)
