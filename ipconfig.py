@@ -20,12 +20,21 @@ import subprocess
 import time
 import tkinter.scrolledtext as st
 
-# from test import validateAddress
+################################################################################################################################################################################
+# PASOS CREAR EJECUTABLE CON ASSETS EMPAQUETADOS
+# 1- CREAR EL ARCHIVO SPEC CON LA SIGUIENTE LINEA
+# option a      pyi-makespec ipconfig.py
+# option b      pyi-makespec --onefile --noconsole --nowindowed --icon='D:\Users\Jose\Google Drive\PROGRAMACION\Repositorios\Python\config-net-interface\icon.ico'  ipconfig.py
 
-#open CMD, place in file folder and tipe: pyinstaller --onefile ipconfig_v1.14.py 
-# pyinstaller --onefile --nowindowed --icon="C:\Users\epugner\Desktop\CURSOS\Practicas Python\practicas propias 2021\config interface - ping tool\img\icon.ico" ipconfig_v1.15.py
-# pyinstaller --noconsole --onefile  --icon="C:\Users\epugner\Desktop\CURSOS\Practicas Python\practicas propias 2021\config interface - ping tool\img\icon.ico" ipconfig_v1.15.py
-# pyinstaller --noconsole --nowindowed --onefile --icon="C:\Users\epugner\Desktop\CURSOS\Practicas Python\practicas propias 2021\config interface - ping tool\img\icon.ico" ipconfig_v1.15.py
+# 2- AGREGAR EN EL ARCHIVO SPEC LA LINEA QUE HACE REFERENCIA AL ARCHIVO REQUERIDO
+
+# a.datas +=[("./config_file_NIC.txt","config_file_NIC.txt","DATA")]
+# a.datas +=[("./ip_address_to_ping.txt","ip_address_to_ping.txt","DATA")]
+# a.datas +=[("./icon.ico","icon.ico","DATA")]
+
+# 3- CREAR NUEVAMENTE EL EJECUTABLE CON LA SIGUIENTE LINEA
+# pyinstaller ipconfig.spec
+################################################################################################################################################################################
 
 class network_configs():
     def __init__(self,icon_img):
@@ -51,7 +60,7 @@ class network_configs():
         self.root.maxsize(ancho_ventana, alto_ventana)
         self.root.minsize(ancho_ventana, alto_ventana)
         self.root.resizable(0,0)
-        self.root.iconbitmap(os.path.dirname(os.path.abspath(__file__)) + '/img/icon.ico')
+        self.root.iconbitmap(os.path.dirname(os.path.abspath(__file__)) + '/icon.ico')
         # self.root.wm_attributes("-topmost", True)
         x_ventana = self.root.winfo_screenwidth() // 2 - ancho_ventana // 2
         y_ventana = self.root.winfo_screenheight() // 2 - alto_ventana // 2
