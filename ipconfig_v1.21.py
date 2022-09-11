@@ -26,6 +26,7 @@ import tkinter.scrolledtext as st
 # pyinstaller --onefile --nowindowed --icon="C:\Users\epugner\Desktop\CURSOS\Practicas Python\practicas propias 2021\config interface - ping tool\img\icon.ico" ipconfig_v1.15.py
 # pyinstaller --noconsole --onefile  --icon="C:\Users\epugner\Desktop\CURSOS\Practicas Python\practicas propias 2021\config interface - ping tool\img\icon.ico" ipconfig_v1.15.py
 # pyinstaller --noconsole --nowindowed --onefile --icon="C:\Users\epugner\Desktop\CURSOS\Practicas Python\practicas propias 2021\config interface - ping tool\img\icon.ico" ipconfig_v1.15.py
+
 class network_configs():
     def __init__(self,icon_img):
         self.icon_img = icon_img
@@ -84,7 +85,6 @@ class network_configs():
         
         self.ip_field = ttk.Combobox(frame2, width=45,validate="key",validatecommand=(self.validatecommand_ping, "%d", "%S", "%s") ,values=())
         self.ip_field.grid(row = 1, column = 0,padx=10, pady=0, sticky='w')
-        # self.ip_field['values'] = ('8.8.8.8',)
         ttk.Button(frame2, text = 'Ping', command= self.ping).grid(row = 1,column=2,sticky='e',pady=10, padx=10)
         ttk.Button(frame2, text = 'Add to list', command= self.add_ping_address).grid(row = 2,column=0,sticky='w',pady=10, padx=40)
         ttk.Button(frame2, text = 'Delete from list', command= self.delete_ping_address).grid(row = 2,column=0,sticky='e',pady=10, padx=40)
@@ -92,14 +92,10 @@ class network_configs():
         # Result
         frame3 = LabelFrame(self.root, text = 'Result',fg=self.fontColor)
         frame3.grid(row = 0, column = 0, pady = 10, padx=10,sticky='e', rowspan=3)
-        # self.text_result = tkinter.Text(frame3,height=16,bg='black', fg = '#00FF00')
-        self.text_result = st.ScrolledText(frame3,height=20,width=98,bg='black',fg='#00FF00',)
+        self.text_result = st.ScrolledText(frame3,height=17,width=98,bg='black',fg='#00FF00',)
         self.text_result.bind("<Key>", lambda a: "break")
-        
-
-        # self.text_result_var = StringVar()
-        # self.text_result = tkinter.Label(frame3,height=16, width=90,textvariable=self.text_result_var, relief=RAISED)
         self.text_result.grid(row = 0, column = 0,pady=10, padx=10, sticky='w')
+        ttk.Button(frame3, text = 'Clear', command= self.clear_result).grid(row = 3,column=0,sticky='e',pady=10, padx=40)
 
         # Show ip config
         frame3_1 = LabelFrame(self.root, text = 'Show Interface Config',fg=self.fontColor)
@@ -177,6 +173,11 @@ class network_configs():
         self.read_file()
         self.read_file2()
         self.root.mainloop()
+
+    def clear_result(self):
+        self.text_result.delete("1.0","end")
+        self.message['text'] = ''
+        self.root.update()
 
     def add_ping_address(self):
         # new_val = (self.ip_field.get(),)
@@ -722,7 +723,7 @@ class network_configs():
         # bind the select event    
         device=self.deviceSelected()
         if device:
-            self.message['text'] = 'Config Selected: ' + str(device)
+            self.message['text'] = '> ' + str(device) + ' <'
 
     def applyConfigOnInterface(self):
         try:
@@ -766,8 +767,8 @@ class network_configs():
 
                 self.message['text'] = 'Appling new settings...'
                 self.root.update()
-                self.message['text'] = 'Configuration Done.'
-                self.root.update()
+                # self.message['text'] = 'Configuration Done.'
+                
                 print (command_string)
                 print (command_result)
                 self.text_result.delete("1.0","end")
@@ -776,8 +777,8 @@ class network_configs():
                 self.text_result.insert(1.0,command_result)
                 self.text_result.insert(1.0,command_string)
                 
-                self.message['text'] = ''
-                
+                self.message['text'] = 'Configuration Done.'
+                self.root.update()
                 
                 
                 
@@ -873,8 +874,8 @@ class network_configs():
             records = self.tree.get_children()
             for element in records:
                 self.tree.delete(element)
-            self.message['text'] = "Loading file... Pathfile: " + self.file_path
-            self.root.update()
+            # self.message['text'] = "Loading file... Pathfile: " + self.file_path
+            # self.root.update()
             time.sleep(0.5)
             #Load lines into tree
 
@@ -889,8 +890,8 @@ class network_configs():
             self.root.update()
             return
 
-        self.message['text'] = "File loaded successfully. Pathfile: " + self.file_path
-        self.root.update()
+        # self.message['text'] = "File loaded successfully. Pathfile: " + self.file_path
+        # self.root.update()
 
     def deviceSelected(self):
         # print (self.list_devices)
@@ -901,7 +902,7 @@ class network_configs():
         except IndexError as e:
             self.message['text'] = 'Please Select a Device'
             return
-        self.message['text']='x'
+        self.message['text']=''
         # name = self.tree.item(self.tree.selection())['text'][0]
         name = self.tree.item(self.tree.selection())['text']
         # print (name)
