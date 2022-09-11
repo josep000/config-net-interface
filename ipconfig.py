@@ -55,7 +55,7 @@ class network_configs():
         # Setting root
         self.root = Tk()
         self.root.title('Network Interface Configurator for windows. Created by Jose Pinto. Email: josep8686@gmail.com')
-        ancho_ventana = 1235
+        ancho_ventana = 1215
         alto_ventana = 690
         self.root.maxsize(ancho_ventana, alto_ventana)
         self.root.minsize(ancho_ventana, alto_ventana)
@@ -159,7 +159,7 @@ class network_configs():
         self.tree.column("#7",anchor=CENTER,width=100,minwidth=100)
         self.tree.column("#8",anchor=CENTER,width=100,minwidth=100)
         self.tree.column("#9",anchor=CENTER,width=100,minwidth=100)
-        self.tree.column("#10",anchor=CENTER,width=300,minwidth=100)
+        self.tree.column("#10",anchor=CENTER,width=280,minwidth=100)
         #---
 
         self.tree.heading("#0",text='', anchor=CENTER)
@@ -509,9 +509,9 @@ class network_configs():
         for letter in reversed(self.device[8]):
             self.dns_2.insert(0,letter)
 
-        # 10-OBSERVATION
+        # 10-Description
         Label(self.edit_wind, text = 'Description').grid(row = 2, column = 2, columnspan=5,padx=5)
-        self.observation= Entry(self.edit_wind, width=67,validate="key",validatecommand=(self.validatecommand_len_36, "%d", "%S", "%s"))
+        self.observation= Entry(self.edit_wind, width=45,validate="key",validatecommand=(self.validatecommand_len_36, "%d", "%S", "%s"))
         self.observation.grid(row = 3, column = 2,columnspan=5,padx=5)
         # Button(self.edit_wind, text = 'Update', command = lambda: self.edit_line(name, new_name.get(), new_price.get())).grid(row = 4, column = 2, sticky=W)
         self.observation.insert(0,self.device[9])
