@@ -12,5 +12,3 @@ Ethernet;dhcp;;;;dhcp;;;Config 5 dhcp
 Wi-Fi;dhcp;;;;dhcp;;;Config 6 dhcp
 Wi-Fi;dhcp;;;;static;8.8.8.8;8.8.4.4;Config 7 ip dhcp, dns static
 Wi-Fi;static;192.168.10.250;255.255.255.0;192.168.10.2;static;192.168.10.2;8.8.8.8;Config 8
-Ethernet;static;192.168.50.21;255.255.255.0;;static;;;
-VirtualBox Host-Only Network;static;10.1.1.1;255.0.0.0;;static;;;

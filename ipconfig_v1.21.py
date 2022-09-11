@@ -696,8 +696,11 @@ class network_configs():
             file.writelines(list_text_file)
             file.close()
             self.read_file()
+        
+        
+        
         self.edit_wind.destroy()
-
+        MsgBox = tkinter.messagebox.showinfo ('Saving data','The new record has been saved successfully')
 
 
     def clone_config(self):
@@ -806,7 +809,7 @@ class network_configs():
         "Wi-Fi;dhcp;;;;static;8.8.8.8;8.8.4.4;Config 7 ip dhcp, dns static\n",
         "Wi-Fi;static;192.168.10.250;255.255.255.0;192.168.10.2;static;192.168.10.2;8.8.8.8;Config 8\n"]      
         
-        L2 = ["8.8.8.8\n","www.google.com\n"]
+        L2 = ["8.8.8.8\n","8.8.4.4\n"]
         
         MsgBox = tkinter.messagebox.askquestion ('Reset all by default','Are you sure you want to reset to factory default?',icon = 'warning')
         if MsgBox == 'yes':
@@ -817,7 +820,7 @@ class network_configs():
                 file2=open(self.file_path2,"w") #lectura y escritura
                 file2.writelines(L2)
                 file2.close()
-                self.message['text'] = "Reset was successfully done"
+                self.message['text'] = "Reset done"
                 self.root.update()
                 self.read_file()
                 self.read_file2()
