@@ -55,8 +55,8 @@ class network_configs():
         # Setting root
         self.root = Tk()
         self.root.title('Network Interface Configurator for windows. Created by Jose Pinto. Email: josep8686@gmail.com')
-        ancho_ventana = 1340
-        alto_ventana = 730
+        ancho_ventana = 1235
+        alto_ventana = 690
         self.root.maxsize(ancho_ventana, alto_ventana)
         self.root.minsize(ancho_ventana, alto_ventana)
         self.root.resizable(0,0)
@@ -101,7 +101,7 @@ class network_configs():
         # Result
         frame3 = LabelFrame(self.root, text = 'Result',fg=self.fontColor)
         frame3.grid(row = 0, column = 0, pady = 10, padx=10,sticky='e', rowspan=3)
-        self.text_result = st.ScrolledText(frame3,height=17,width=98,bg='black',fg='#00FF00',)
+        self.text_result = st.ScrolledText(frame3,height=16,width=85,bg='black',fg='#00FF00',font = ("Consolas",10))
         self.text_result.bind("<Key>", lambda a: "break")
         self.text_result.grid(row = 0, column = 0,pady=10, padx=10, sticky='w')
         ttk.Button(frame3, text = 'Clear', command= self.clear_result).grid(row = 3,column=0,sticky='e',pady=10, padx=40)
@@ -124,7 +124,7 @@ class network_configs():
         self.interface_name_2.grid(row = 0, column = 0,padx=5)
 
         # Output Message
-        self.message = Label(text = '', fg = 'red', background=self.bgColor, font=(7))
+        self.message = Label(text = '', fg = 'red', background=self.bgColor, font = (None,10))
         self.message.grid(row = 3, column = 0, columnspan=2, sticky= W + E,pady=0, padx=20)
         
 
@@ -141,6 +141,13 @@ class network_configs():
 
         #Setting treeview
         self.tree = ttk.Treeview(frame4)
+        
+        self.style = ttk.Style()
+        self.style.configure("Treeview.Heading", font=(None, 9))
+        
+        self.style = ttk.Style()
+        self.style.configure("Treeview.Column", font=(None, 8))
+        
         self.tree['columns']=('x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9','x10')
         self.tree.column('#0',width=0, stretch=NO)
         self.tree.column('#1',anchor=CENTER,width=30,minwidth=30,stretch=NO)
@@ -152,7 +159,7 @@ class network_configs():
         self.tree.column("#7",anchor=CENTER,width=100,minwidth=100)
         self.tree.column("#8",anchor=CENTER,width=100,minwidth=100)
         self.tree.column("#9",anchor=CENTER,width=100,minwidth=100)
-        self.tree.column("#10",anchor=CENTER,width=400,minwidth=100)
+        self.tree.column("#10",anchor=CENTER,width=300,minwidth=100)
         #---
 
         self.tree.heading("#0",text='', anchor=CENTER)
@@ -789,7 +796,7 @@ class network_configs():
                 self.text_result.insert(1.0,command_result)
                 self.text_result.insert(1.0,command_string)
                 
-                self.message['text'] = 'Configuration Done.'
+                self.message['text'] = 'Press Show Interface Button to see interface configuration status.'
                 self.root.update()
                 
                 
